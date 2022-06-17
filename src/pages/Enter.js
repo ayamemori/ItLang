@@ -6,7 +6,7 @@ import Input from '../util/input/Input';
 import { registration } from '../action/user';
 
 const Enter = () => {
-    const [email, setEmail] = useState(initialState);
+    const [username, setUsername] = useState(initialState);
     const [password, setPassword] = useState(initialState);
 
     return (
@@ -21,17 +21,19 @@ const Enter = () => {
                     </Nav>
 
                     <div ng-app ng-init="checked = false">
-                        <form class="form-signin" action="/" method="post" >
+                        <form class="form-signin">
                             <label className="enter__label" for="email">Email</label>
-                            <input value={email} setValue={setEmail} class="form-styling" type="username" name="username" id="username" autocomplete="off" required />
+                            <input value={username} setValue={setUsername} class="form-styling" type="username" name="username" id="username" autocomplete="off" required />
 
                             <label className="enter__label" for="pass">Password</label>
                             <input value={password} setValue={setPassword} class="form-styling" type="password" name="password" id="password" autocomplete="off" required />
 
                             <div class="btn-animates">
-                                <button href="/account" onClick={() => registration (email, password)} class="btn-animate" type="submit" >Авторизація</button>
+                                <button href="/account" onClick={() => registration (username, password)} class="btn-animate" type="submit" >Авторизація</button>
                             </div>
                         </form>
+
+
 
                         <form class="form-signup" method="post" >
                             <label className="enter__label" for="first_name">Name</label>
