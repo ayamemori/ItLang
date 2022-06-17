@@ -88,7 +88,7 @@ export default class Account extends Component {
                                     <Card.Body>
                                         <Card.Title>Підготовка до ЗНО</Card.Title>
 
-                                        <div class="progress-pie-chart-eng" data-percent="45">
+                                        <div class="progress-pie-chart-eng" data-percent="25">
                                             <div class="ppc-progress-eng">
                                                 <div class="ppc-progress-fill-eng"></div>
                                             </div>

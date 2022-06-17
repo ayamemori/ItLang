@@ -29,16 +29,16 @@ const Enter = () => {
                             <input value={password} setValue={setPassword} class="form-styling" type="password" name="password" id="pass" autocomplete="off" required />
 
                             <div class="btn-animates">
-                                <button onClick={() => registration (email, password)} class="btn-animate" type="submit" >Авторизація</button>
+                                <button href="/account" onClick={() => registration (email, password)} class="btn-animate" type="submit" >Авторизація</button>
                             </div>
                         </form>
 
                         <form class="form-signup" method="post" >
                             <label className="enter__label" for="first_name">Name</label>
-                            <input class="form-styling" type="text" name="first_name" id="name" />
+                            <input class="form-styling" type="text" name="first_name" id="name" required/>
 
                             <label className="enter__label" for="last_name">Surname</label>
-                            <input class="form-styling" type="text" name="last_name" id="surname" />
+                            <input class="form-styling" type="text" name="last_name" id="surname" required/>
 
                             <label className="enter__label" for="email">Email</label>
                             <input class="form-styling" type="text" name="email" id="login" autocomplete="off" required />
