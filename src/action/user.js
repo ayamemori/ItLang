@@ -12,5 +12,3 @@ export const login = async (username, password) => {
         alert(e)
     }
 }
-
-window.onload = login;
