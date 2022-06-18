@@ -28,7 +28,7 @@ export default class AddCourse extends Component {
                                         <Form.Control as="textarea" name="captionCourse" placeholder="Опис курсу" />
                                     </Form.Group>
 
-                                    <Button href="/admin/addcourse/addtheme" className="ms-auto orng__button" variant="warning">Додати тему</Button>
+                                    <Button href="/admin/addcourse/addlesson" className="ms-auto orng__button" variant="warning">Додати тему</Button>
                                 </Col>
                             </Row>
                         </Form>

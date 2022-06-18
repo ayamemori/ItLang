@@ -31,6 +31,11 @@ export default class AddBlog extends Component {
 
                                     <Button href="/admin/addcourse/addtheme" className="ms-auto orng__button" variant="warning">Запостити</Button>
                                 </Col>
+
+                                <div className="mt-3 mb-4">
+                                    <label for="formFile" class="form-label">Фото до теми</label>
+                                    <input class="form-control" type="file" id="formFile" />
+                                </div>
                             </Row>
                             <RichTextEditor />
                         </Form>

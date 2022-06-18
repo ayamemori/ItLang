@@ -1,60 +1,65 @@
-import React, { useState, initialState } from 'react';
+import React from 'react';
 import '../assets/js/regform';
 import { Container, Nav } from 'react-bootstrap';
-import Input from '../util/input/Input';
+import { login } from '../action/user';
 
-import { registration } from '../action/user';
+const Enter = props => {
+    let use = React.createRef();
+    function userClick() {
+        console.log(use.current.value)
+        return use.current.value;}
 
-const Enter = () => {
-    const [username, setUsername] = useState(initialState);
-    const [password, setPassword] = useState(initialState);
+    let pass = React.createRef();
+    function passClick() {
+        console.log(pass.current.value)
+        return pass.current.value;}
 
     return (
         <>
             <Container className="mt-4">
-                <div class="frame">
+                <div className="frame">
                     <Nav className="enter__nav">
                         <ul>
-                            <li class="signin-active"><a class="btn enter__btn">Sign in</a></li>
-                            <li class="signup-inactive"><a class="btn enter__btn">Sign up </a></li>
+                            <li className="signin-active"><a class="btn enter__btn">Sign in</a></li>
+                            <li className="signup-inactive"><a class="btn enter__btn">Sign up </a></li>
                         </ul>
                     </Nav>
 
                     <div ng-app ng-init="checked = false">
-                        <form class="form-signin">
+                        <form className="form-signin">
                             <label className="enter__label" for="email">Email</label>
-                            <input value={username} setValue={setUsername} class="form-styling" type="username" name="username" id="username" autocomplete="off" required />
+                            <input ref={use} class="form-styling" type="username" name="username" id="username" autoComplete="off" required />
 
                             <label className="enter__label" for="pass">Password</label>
-                            <input value={password} setValue={setPassword} class="form-styling" type="password" name="password" id="password" autocomplete="off" required />
+                            <input ref={pass} class="form-styling" type="password" name="password" id="password" autoComplete="off" required />
 
-                            <div class="btn-animates">
-                                <button href="/account" onClick={() => registration (username, password)} class="btn-animate" type="submit" >Авторизація</button>
+                            <div className="btn-animates">
+                                <div onClick={() => login(userClick(), passClick())} class="btn-animate">Авторизація</div>
                             </div>
                         </form>
 
 
 
-                        <form class="form-signup" method="post" >
+                        <form class="form-signup">
                             <label className="enter__label" for="first_name">Name</label>
-                            <input class="form-styling" type="text" name="first_name" id="name" required/>
+                            <input className="form-styling" type="text" name="first_name" id="name" required />
 
                             <label className="enter__label" for="last_name">Surname</label>
-                            <input class="form-styling" type="text" name="last_name" id="surname" required/>
+                            <input className="form-styling" type="text" name="last_name" id="surname" required />
 
                             <label className="enter__label" for="email">Email</label>
-                            <input class="form-styling" type="text" name="email" id="login" autocomplete="off" required />
+                            <input className="form-styling" type="text" name="email" id="login" autocomplete="off" required />
 
                             <label className="enter__label" for="password">Password</label>
-                            <input class="form-styling" type="password" name="password" id="password" autocomplete="off" required />
+                            <input className="form-styling" type="password" name="password" id="password" autocomplete="off" required />
 
                             <label className="enter__label" for="confirm">Confirm password</label>
-                            <input class="form-styling" type="password" name="confirm" autocomplete="off" required />
+                            <input className="form-styling" type="password" name="confirm" autocomplete="off" required />
 
                             <label className="enter__label" for="group">Group</label>
-                            <input class="form-styling" type="text" name="group" id="group" required />
+                            <input className="form-styling" type="text" name="group" id="group" required />
 
-                            <button class="btn-animate" type="submit" >Реєстрація</button>
+                            <button className="btn-animate" type="submit" >Реєстрація</button>
                         </form>
                     </div>
 

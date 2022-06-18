@@ -4,6 +4,7 @@ function useLocalState(defaultValue, key) {
     const [value, setValue] = useState(() => {
         const localStorageValue = localStorage.getItem(key);
 
+        // eslint-disable-next-line no-unused-expressions
         localStorageValue !== null
             ? JSON.parse(localStorageValue)
             : defaultValue;

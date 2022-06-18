@@ -87,7 +87,6 @@ export default class AddTheme extends Component {
                                 <Button className="col-3 orng__button many" variant="warning" onClick={addQuestion}>Додати питання</Button>
                             </Row>
 
-
                             <Button type="submit" className="orng__button" variant="warning">Зберегти</Button>
                         </Form>
                     </div>

@@ -1,14 +1,16 @@
 import axios from 'axios';
 
-export const registration = async (username, password) => {
+export const login = async (username, password) => {
     try {
-        const response = await axios.post('http://178.62.56.162:8000/acc/login', {
-            'username': username,
-            'password': password
+        const response = await axios.post('acc/login', {
+            username: username,
+            password: password
         });
-        alert(response.data.message)
+        alert(`access:\n${response.data['access']}\n refresh:\n${response.data['refresh']}`)
 
     } catch (e) {
         alert(e)
     }
 }
+
+window.onload = login;

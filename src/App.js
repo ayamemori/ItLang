@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 import './assets/css/custom.css';
 import './assets/css/fonts.css';
@@ -24,34 +23,6 @@ import AddBlog from './pages/AddBlog/AddBlog';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
-    const [jwt, setJwt] = useState("");
-
-    useEffect(() => {
-        console.log('Hello!');
-        const reqBody = {
-            username: 'rinakoo',
-            password: 'izengard',
-        }
-
-        fetch("api/auth/login", {
-            headers: {
-                "Content-Type": "application/json",
-            },
-            method: "post",
-            body: JSON.stringify(reqBody),
-        })
-
-            .then((response) => Promise.all([response.json(), response.headers]))
-            .then(([body, headers]) => {
-                setJwt(headers.get("authorization"));
-            });
-    }, []);
-
-    useEffect(() => {
-        console.log(`JWT is: ${jwt}`);
-    }, [jwt]);
-    
-    const [input, setInput] = useState();
     return (
         <>
             <Routes>
@@ -68,7 +39,7 @@ function App() {
 
                 <Route path="/admin" element={<AdminPanel />} />
                 <Route path="/admin/addcourse" element={<AddCourse />} />
-                <Route path="/admin/addcourse/addtheme" element={<AddTheme />} />
+                <Route path="/admin/addcourse/addlesson" element={<AddTheme />} />
                 <Route path="/admin/addblog" element={<AddBlog />} />
 
                 <Route path="/*" element={<NotFoundPage />} />
