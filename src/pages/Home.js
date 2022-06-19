@@ -30,7 +30,7 @@ export default class Home extends Component {
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        items: result.courses
+                        items: result
                     });
                 },
                 (error) => {
@@ -54,13 +54,13 @@ export default class Home extends Component {
                 preserveAspectRatio: "xMidYMid slice"
             }
         };
-
+        const tmp = {items}
+        const txt = tmp.items
         if (error) {
             return <p> Error {error.message}</p>
         } else if (!isLoaded) {
             return <p> Loading.. </p>
         } else {
-            console.log({items})
             return (
                 <>
                     {showHomeHeader()}
@@ -113,19 +113,18 @@ export default class Home extends Component {
                         <Row className="d-flex justify-content-evenly cards__row">
                             <Card className="col-sm-10 col-md-5 col-lg-4 cards">
                                 <Card.Img
-                                    // key={items.name}
-                                    // src={items[0]['strDrinkThumb']}
+                                    src = {`data:image/png;base64, ${txt[0]['preview']}`}
                                     alt='EngForIT'
                                     position='top'
                                 />
 
                                 <Card.Body>
-                                    {/* <Card.Title key={items.name}>
-                                        {items[0]['course_name']}
-                                    </Card.Title> */}
-                                    {/* <Card.Text key={items.name}>
-                                        {items[0]['strDrink']}
-                                    </Card.Text> */}
+                                    <Card.Title>
+                                        {txt[0]['course_name']}
+                                    </Card.Title>
+                                    <Card.Text>
+                                        {txt[0]['description']}
+                                    </Card.Text>
                                     <Button href="/courses" className="orng__button" variant="warning">Детальніше</Button>
                                 </Card.Body>
                             </Card>
