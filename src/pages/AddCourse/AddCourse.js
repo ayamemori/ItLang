@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 
+import ImageUpload from '../../components/Upload';
+
 import EngIt from '../../assets/img/engit.png';
 import Delete from '../../assets/img/delete.svg';
+
+import HomeGet from '../../action/HomeGet';
 
 export default class AddCourse extends Component {
     render() {
@@ -12,11 +16,9 @@ export default class AddCourse extends Component {
                     <div className="acc__inner">
                         <Form>
                             <Row>
-                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-2">
-                                    <div class="upload__photo">
-                                        <input type="file" class="upload" name="avatar" id="" />
-                                        <img className="w-100" src={EngIt} alt="" />
-                                    </div>
+                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-3">
+                                    Заставка курсу
+                                    <ImageUpload />
                                 </Col>
 
                                 <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5 inputs__inner">
@@ -38,22 +40,24 @@ export default class AddCourse extends Component {
                                 Intro
                                 <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
                             </li>
-                            
+
                             <li className="d-flex justify-content-between courses__item">
                                 Тема 1
                                 <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
                             </li>
-                            
+
                             <li className="d-flex justify-content-between courses__item">
                                 Тема 2
                                 <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
                             </li>
-                            
+
                             <li className="d-flex justify-content-between courses__item">
                                 Тема 3
                                 <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
                             </li>
                         </ol>
+
+                        <HomeGet/>
                     </div>
                 </div>
             </>

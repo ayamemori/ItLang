@@ -7,88 +7,128 @@ import EngZno from '../assets/img/engzno.png';
 import { showHomeHeader, showHomeFooter } from '../components/Home/HomeShow';
 
 export default class Courses extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            erorr: null,
+            isLoaded: false,
+            items: []
+        };
+    }
+
+    componentDidMount() {
+        fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        isLoaded: true,
+                        items: result.drinks
+                    });
+                },
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    })
+                }
+
+            )
+    }
+
     render() {
-        return (
-            <>
-                {showHomeHeader()}
-                <div className="courses__inner">
-                    <Row className="courses__block">
-                        <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
-                            <img
-                                src={EngIt}
-                                alt=""
-                                width="300px"
-                            />
-                        </Col>
+        const { error, isLoaded, items } = this.state;
+        if (error) {
+            return <p> Error {error.message}</p>
+        } else if (!isLoaded) {
+            return <p> Loading.. </p>
+        } else {
+            return (
+                <>
+                    {showHomeHeader()}
+                    <div className="courses__inner">
+                        <Row className="courses__block">
+                            <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
+                                <img
+                                    key={items.name}
+                                    src={items[0]['strDrinkThumb']}
+                                    alt=""
+                                    width="300px"
+                                />
+                            </Col>
 
-                        <Col className="courses__info">
-                            <div className="courses__title">
-                                Англійська для ІТ
-                            </div>
+                            <Col className="courses__info">
+                                <div className="courses__title" key={items.name}>
+                                    {items[0]['strDrink']}
+                                </div>
 
-                            <div className="mt-3 mb-3 suptitle">
-                                Курс для усіх, хто хоче пов'язати своє життя з ІТ! Тут для вас зібрана інформація, необіхдна для поглиблення у цю сферу: від лексики до складання резюме!
-                            </div>
+                                <div className="mt-3 mb-3 suptitle" key={items.name}>
+                                    {items[0]['strDrink']}
+                                </div>
 
-                            <table class="table table-bordered table-striped table-hover">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td> Англійська для ІТ </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td> Застосування англійської в ІТ</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td> Поширені помилки та їх вирішення </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <table class="table table-bordered table-striped table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td key={items.name}> {items[0]['strDrink']} </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> Застосування англійської в ІТ</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td> Поширені помилки та їх вирішення </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                        </Col>
-                    </Row>
+                            </Col>
+                        </Row>
 
-                    <Row className="courses__block">
-                        <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
-                            <img
-                                src={EngZno}
-                                alt=""
-                                width="300px"
-                            />
-                        </Col>
 
-                        <Col className="courses__info">
-                            <div className="courses__title">
-                                Підготовка до ЗНО
-                            </div>
 
-                            <div className="mt-3 mb-3 suptitle">
-                                ЗНО - це завжди велика відповідальність, і не завжди легко підготуватись до нього самостійно. Якщо ти хочеш скласти іспит на усі 200 - тобі необхідний цей курс!
-                            </div>
+                        <Row className="courses__block">
+                            <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
+                                <img
+                                    key={items.name}
+                                    src={items[1]['strDrinkThumb']}
+                                    alt=""
+                                    width="300px"
+                                />
+                            </Col>
 
-                            <table class="table table-bordered table-striped table-hover">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td> Past Simple</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td> Present Simple </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td> Future Simple </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </Col>
-                    </Row>
-                </div>
-                {showHomeFooter()}
-            </>
-        );
+                            <Col className="courses__info">
+                                <div className="courses__title" key={items.name}>
+                                    {items[1]['strDrink']}
+                                </div>
+
+                                <div className="mt-3 mb-3 suptitle" key={items.name}>
+                                    {items[1]['strDrink']}
+                                </div>
+
+                                <table class="table table-bordered table-striped table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td key={items.name}> {items[1]['strDrink']} </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> Present Simple </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td> Future Simple </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </Col>
+                        </Row>
+                    </div>
+                    {showHomeFooter()}
+                </>
+            );
+        }
     }
 }

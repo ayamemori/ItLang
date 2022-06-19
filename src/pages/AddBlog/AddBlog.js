@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import RichTextEditor from '../../components/RichTextEditor';
 
-import Upload from '../../assets/img/blog2.jpg';
-
+import ImageUpload from '../../components/Upload';
 
 export default class AddBlog extends Component {
     render() {
@@ -13,8 +12,9 @@ export default class AddBlog extends Component {
                     <div className="acc__inner">
                         <Form>
                             <Row>
-                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-2">
-
+                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-3">
+                                    Заставка статті
+                                    <ImageUpload />
                                 </Col>
 
                                 <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5 inputs__inner">
@@ -28,12 +28,12 @@ export default class AddBlog extends Component {
 
                                     <Button href="/admin/addcourse/addtheme" className="ms-auto orng__button" variant="warning">Запостити</Button>
                                 </Col>
-
-                                <div className="mt-3 mb-4">
-                                    <label for="formFile" class="form-label">Фото до теми</label>
-                                    <input class="form-control" type="file" id="formFile" />
-                                </div>
                             </Row>
+
+                            <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-3 mt-3 mb-3">
+                                Фото у статті
+                                <ImageUpload />
+                            </Col>
                             <RichTextEditor />
                         </Form>
                     </div>
