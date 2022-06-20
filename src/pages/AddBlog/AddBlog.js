@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import RichTextEditor from '../../components/RichTextEditor';
 
-import ImageUpload from '../../components/Upload';
+import ImageUpload from '../../components/ImageUpload';
 
 export default class AddBlog extends Component {
     render() {

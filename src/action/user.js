@@ -2,11 +2,13 @@ import axios from 'axios';
 
 export const login = async (username, password) => {
     try {
-        const response = await axios.post('acc/login', {
+        const response = await axios.post('http://127.0.0.1:8000/acc/login', {
             username: username,
             password: password
         });
-        alert(`access:\n${response.data['access']}\n refresh:\n${response.data['refresh']}`)
+        
+
+        alert(response.data['access'])
 
     } catch (e) {
         alert(e)

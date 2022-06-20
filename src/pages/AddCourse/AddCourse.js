@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
-
-import ImageUpload from '../../components/Upload';
-
-import EngIt from '../../assets/img/engit.png';
 import Delete from '../../assets/img/delete.svg';
+
+import ImageUpload from '../../components/ImageUpload';
 
 import HomeGet from '../../action/HomeGet';
 

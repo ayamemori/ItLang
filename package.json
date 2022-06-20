@@ -1,8 +1,8 @@
 {
-  "proxy": "http://178.62.56.162:8000/",
   "name": "client",
   "version": "0.1.0",
   "private": false,
+  "homepage": "/build",
   "dependencies": {
     "@lottiefiles/lottie-interactivity": "^1.5.2",
     "@testing-library/jest-dom": "^5.16.1",
@@ -21,9 +21,9 @@
     "react-bootstrap": "^2.0.3",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^17.0.2",
-    "react-images-uploading": "^3.1.6",
     "react-router-dom": "^6.1.1",
     "react-scripts": "4.0.3",
+    "serve": "^13.0.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

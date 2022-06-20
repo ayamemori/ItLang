@@ -14,6 +14,7 @@ import Enter from './pages/Enter';
 import Account from './pages/Account/Account';
 import AccountCourses from './pages/Account/AccountCourses';
 import CourseLesson from './pages/Account/CourseLesson';
+import CourseTest from './pages/Account/CourseTest';
 
 import AdminPanel from './pages/AdminPanel';
 import AddCourse from './pages/AddCourse/AddCourse';
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/account" element={<Account />} />
                 <Route path="/account/courses" element={<AccountCourses />} />
                 <Route path="/account/lesson" element={<CourseLesson />} />
+                <Route path="/account/lesson/test" element={<CourseTest />} />
 
                 <Route path="/admin" element={<AdminPanel />} />
                 <Route path="/admin/addcourse" element={<AddCourse />} />

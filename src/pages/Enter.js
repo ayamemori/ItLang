@@ -7,12 +7,14 @@ const Enter = props => {
     let use = React.createRef();
     function userClick() {
         console.log(use.current.value)
-        return use.current.value;}
+        return use.current.value;
+    }
 
     let pass = React.createRef();
     function passClick() {
         console.log(pass.current.value)
-        return pass.current.value;}
+        return pass.current.value;
+    }
 
     return (
         <>
