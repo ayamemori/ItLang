@@ -148,8 +148,6 @@ const AddTheme = props => {
                             </Col>
                         </Row>
 
-                        
-                        
                         <RichTextEditor />
 
                         <ol>

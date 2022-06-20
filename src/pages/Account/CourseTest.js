@@ -18,7 +18,7 @@ export default class CourseTest extends Component {
 
                         <Formik
                             initialValues={{
-                                one_test: [],
+                                one_test: '',
                                 two_test: '',
                                 three_test: '',
                                 four_test: '',

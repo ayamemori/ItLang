@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { showLessonHeader, showLessonSidebar } from '../../components/Account/AccountShow';
 import { Button } from 'react-bootstrap';
-import { Formik, Field, Form } from 'formik';
 import Post from '../../assets/img/blog1.png';
 
 import { thequestions } from '../../assets/js/quiz';
@@ -50,6 +49,9 @@ export default class CourseTheme extends Component {
 
         console.log(arr.indexOf([newplace]) + '--new laos')
     }
+
+
+    
 
     render() {
         const numcorrect = this.state.correctanswers;

@@ -47,7 +47,7 @@ export default class Home extends Component {
                 preserveAspectRatio: "xMidYMid slice"
             }
         };
-        // const tmp = {items}
+        // const tmp = { items }
         // const txt = tmp.items
         // if (error) {
         //     return <p> Error {error.message}</p>
@@ -62,7 +62,7 @@ export default class Home extends Component {
                         <Lottie className="anim" animationData={firstAnim} options={defaultOptions} />
                         <Carousel.Caption>
                             <h3>Англійська - це легко!</h3>
-                            <Button className="learnmore__button" variant="outline-light">Learn More</Button>
+                            <Button href="/courses" className="learnmore__button" variant="outline-light">Learn More</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -70,7 +70,7 @@ export default class Home extends Component {
                         <Lottie className="anim" animationData={secondAnim} />
                         <Carousel.Caption>
                             <h3>Вчити англійську - це продуктивно!</h3>
-                            <Button className="learnmore__button" variant="outline-light">Learn More</Button>
+                            <Button href="/courses" className="learnmore__button" variant="outline-light">Learn More</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -78,7 +78,7 @@ export default class Home extends Component {
                         <Lottie className="anim" animationData={thirdAnim} />
                         <Carousel.Caption>
                             <h3>Вчи англійську за власним графіком</h3>
-                            <Button className="learnmore__button" variant="outline-light">Learn More</Button>
+                            <Button href="/courses" className="learnmore__button" variant="outline-light">Learn More</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -86,7 +86,7 @@ export default class Home extends Component {
                         <Lottie className="anim" animationData={fourthAnim} />
                         <Carousel.Caption>
                             <h3>Вчи англійську вдома</h3>
-                            <Button className="learnmore__button" variant="outline-light">Learn More</Button>
+                            <Button href="/courses" className="learnmore__button" variant="outline-light">Learn More</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -105,19 +105,19 @@ export default class Home extends Component {
                 <Container>
                     <Row className="d-flex justify-content-evenly cards__row">
                         <Card className="col-sm-10 col-md-5 col-lg-4 cards">
-                            {/* <Card.Img
-                                    src = {`data:image/png;base64, ${txt[0]['preview']}`}
-                                    alt='EngForIT'
-                                    position='top'
-                                /> */}
+                            <Card.Img
+                                // src = {`data:image/png;base64, ${txt[0]['preview']}`}
+                                alt='EngForIT'
+                                position='top'
+                            />
 
                             <Card.Body>
-                                {/* <Card.Title>
-                                        {txt[0]['course_name']}
-                                    </Card.Title>
-                                    <Card.Text>
-                                        {txt[0]['description']}
-                                    </Card.Text> */}
+                                <Card.Title>
+                                    {/* {txt[0]['course_name']} */}
+                                </Card.Title>
+                                <Card.Text>
+                                    {/* {txt[0]['description']} */}
+                                </Card.Text>
                                 <Button href="/courses" className="orng__button" variant="warning">Детальніше</Button>
                             </Card.Body>
                         </Card>

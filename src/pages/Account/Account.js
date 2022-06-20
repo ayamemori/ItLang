@@ -40,13 +40,13 @@ export default class Account extends Component {
 
                                     <Col className="d-flex flex-column col-sm-12 col-md-8 col-lg-5 col-xl-3 col-xxl-3 inputs__inner">
                                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                                            <Form.Label>Login</Form.Label>
-                                            <Form.Control type="email" placeholder="itlang@gmail.com" />
+                                            <Form.Label>Username</Form.Label>
+                                            <Form.Control type="email" placeholder="Bober" />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                                            <Form.Label>Пароль</Form.Label>
-                                            <Form.Control type="password" placeholder="izengard123" />
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control type="password" placeholder="itlang@gmail.com" />
                                         </Form.Group>
                                     </Col>
                                 </Row>
@@ -69,7 +69,7 @@ export default class Account extends Component {
                                     <Card.Body>
                                         <Card.Title>Англійська для ІТ</Card.Title>
 
-                                        <div class="progress-pie-chart-it" data-percent="74">
+                                        <div class="progress-pie-chart-it" data-percent="66">
                                             <div class="ppc-progress-it">
                                                 <div class="ppc-progress-fill-it"></div>
                                             </div>
