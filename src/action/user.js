@@ -6,6 +6,7 @@ export const login = async (username, password) => {
             username: username,
             password: password
         });
+        window.localStorage.setItem('token', response.data['access']);
         
         alert(response.data['access'])
 

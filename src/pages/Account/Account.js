@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Col, Row, Card, Form } from 'react-bootstrap';
 import { showAccountHeader, showAccountSidebar } from '../../components/Account/AccountShow';
 import acc from '../../assets/img/account.svg';
+import ImageUpload from '../../components/ImageUpload';
 
 import '../../assets/js/progressit';
 import '../../assets/js/progresseng';

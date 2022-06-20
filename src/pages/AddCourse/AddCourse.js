@@ -14,7 +14,7 @@ export default class AddCourse extends Component {
                     <div className="acc__inner">
                         <Form>
                             <Row>
-                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-3">
+                                <Col className="col-xs-8 col-sm-12 col-md-8 col-lg-3 col-xl-3 col-xxl-3 upload__photo">
                                     Заставка курсу
                                     <ImageUpload />
                                 </Col>

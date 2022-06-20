@@ -25,25 +25,12 @@ const Enter = props => {
     let group = React.createRef();
     function signUpClick() {
         console.log(name.current.value)
-        // return name.current.value;
-
         console.log(surname.current.value)
-        // return surname.current.value;
-
         console.log(username.current.value)
-        // return username.current.value;
-
         console.log(email.current.value)
-        // return email.current.value;
-
-        // console.log(password.current.value)
-        // return password.current.value;
-
+        console.log(password.current.value)
         console.log(confirm.current.value)
-        // return confirm.current.value;
-
         console.log(group.current.value)
-        //return group.current.value;
     }
 
     return (
@@ -97,12 +84,6 @@ const Enter = props => {
                             <div onClick={() => signup(signUpClick())} className="btn-animate" type="submit" >Реєстрація</div>
                         </form>
                     </div>
-
-
-                    <div class="forgot">
-                        <a href="#">Forgot your password?</a>
-                    </div>
-
                 </div>
             </Container>
         </>

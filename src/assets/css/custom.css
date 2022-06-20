@@ -97,6 +97,24 @@ body {
 }
 
 
+/*---IMG UPLOAD---*/
+.hide {
+    z-index: 0;
+    position: relative;
+    width: 50%;
+}
+
+.show {
+    border: none !important;
+    z-index: 1;
+    position: absolute;
+}
+
+.upload__photo {
+    margin-bottom: 100px;
+}
+
+
 /*--HOME HEADER--*/
 .logo {
     margin-right: 50px;
@@ -897,29 +915,6 @@ a.btn-signin:hover {
     .inputs__inner {
         margin-top: 20px !important;
     }
-}
-
-.upload__photo {
-    position: relative;
-    top: 0;
-    left: 0;
-
-    height: auto;
-    margin-top: 10px;
-    max-width: 100%;
-    width: 100%;
-}
-
-.upload {
-    position: absolute;
-
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.upload__photo:hover {
-    opacity: 0.25;
 }
 
 .acc__cards {
