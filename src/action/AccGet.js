@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 
-export default class HomeGet extends Component {
+export default class AccGet extends Component {
     constructor(props) {
         super(props);
         this.state = {
             erorr: null,
             isLoaded: false,
-            items: []
+            key: '',
+            arr: []
         };
     }
 
     componentDidMount() {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink")
+        fetch("")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        items: result.drinks
+                        key: Object.keys(result)[0],
+                        arr: result[key]
                     });
                 },
                 (error) => {
@@ -26,8 +28,8 @@ export default class HomeGet extends Component {
                         error
                     })
                 }
-
             )
+        console.log(key, arr);
     }
 
     render() {

@@ -1,44 +1,44 @@
 const thequestions = [
     {
-        question: 'AUTHORING',
+        question: 'I ... a student',
         options: [
-            { option: 'Авторизація', iscorrect: false },
-            { option: 'Розробка', iscorrect: true }
+            { option: 'I were a student', iscorrect: false },
+            { option: 'I was a student', iscorrect: true }
         ]
     },
     {
-        question: 'ARTIFICIAL INTELLIGENCE',
+        question: 'Max ... an office-worker',
         options: [
-            { option: 'Штучний інтелект', iscorrect: true },
-            { option: 'Артефакт', iscorrect: false }
+            { option: 'Max was an office-worker', iscorrect: true },
+            { option: 'Max is an office-worker', iscorrect: false }
         ]
     },
     {
-        question: 'TRACKING',
+        question: 'We ... late, sorry!',
         options: [
-            { option: 'Відслідковування', iscorrect: true },
-            { option: 'Трафік', iscorrect: false },
+            { option: 'We were late, sorry!', iscorrect: true },
+            { option: 'We is late, sorry!', iscorrect: false },
         ]
     },
     {
-        question: 'CODE REVIEW',
+        question: 'The teacher ... nice.',
         options: [
-            { option: 'Слідкування за кодом', iscorrect: false },
-            { option: 'Перевірка коду', iscorrect: true }
+            { option: 'The teacher is nice.', iscorrect: false },
+            { option: 'The teacher was nice.', iscorrect: true }
         ]
     },
     {
-        question: 'OVERFLOW',
+        question: 'The pupils ... very clever.',
         options: [
-            { option: 'Переписування', iscorrect: false },
-            { option: 'Переповнення', iscorrect: true }
+            { option: 'The pupils are very clever.', iscorrect: false },
+            { option: 'The pupils were very clever.', iscorrect: true }
         ]
     },
     {
-        question: 'PORTABILITY',
+        question: 'He ... nice though.',
         options: [
-            { option: 'Портативність', iscorrect: true },
-            { option: 'Пристрій', iscorrect: false }
+            { option: 'He was nice though.', iscorrect: true },
+            { option: 'He or nice though.', iscorrect: false }
         ]
     }
 ];

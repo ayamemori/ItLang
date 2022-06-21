@@ -17,7 +17,7 @@ export default class AddBlog extends Component {
                                     <ImageUpload />
                                 </Col>
 
-                                <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5 inputs__inner">
+                                <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5">
                                     <Form.Group className="mb-3">
                                         <Form.Control type="text" name="nameBlog" placeholder="Назва статті" />
                                     </Form.Group>

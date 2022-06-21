@@ -4,8 +4,6 @@ import Delete from '../../assets/img/delete.svg';
 
 import ImageUpload from '../../components/ImageUpload';
 
-import HomeGet from '../../action/HomeGet';
-
 export default class AddCourse extends Component {
     render() {
         return (
@@ -19,7 +17,7 @@ export default class AddCourse extends Component {
                                     <ImageUpload />
                                 </Col>
 
-                                <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5 inputs__inner">
+                                <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5">
                                     <Form.Group className="mb-3">
                                         <Form.Control type="text" name="nameCourse" placeholder="Назва курсу" />
                                     </Form.Group>
@@ -54,8 +52,6 @@ export default class AddCourse extends Component {
                                 <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
                             </li>
                         </ol>
-
-                        <HomeGet/>
                     </div>
                 </div>
             </>

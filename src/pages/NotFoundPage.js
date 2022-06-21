@@ -10,7 +10,7 @@ export default class NotFoundPage extends Component {
                 <div className="page404">
                     <div class="error">404</div>
                     <span class="info">File not found</span>
-                    <img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static" />
+                    <img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" alt="notfound" className="static" />
                 </div>
             </>
         );

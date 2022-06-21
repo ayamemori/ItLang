@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Accordion, Row, Col } from 'react-bootstrap';
-
-import EngIt from '../assets/img/engit.png';
-import EngZno from '../assets/img/engzno.png';
+import { Row, Col } from 'react-bootstrap';
 
 import { showHomeHeader, showHomeFooter } from '../components/Home/HomeShow';
 
@@ -17,13 +14,13 @@ export default class Courses extends Component {
     }
 
     componentDidMount() {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink")
+        fetch("http://127.0.0.1:8000/edu/get/courses")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        items: result.drinks
+                        items: result
                     });
                 },
                 (error) => {
@@ -38,6 +35,8 @@ export default class Courses extends Component {
 
     render() {
         const { error, isLoaded, items } = this.state;
+        const txt = { items }.items.course;
+
         if (error) {
             return <p> Error {error.message}</p>
         } else if (!isLoaded) {
@@ -50,27 +49,26 @@ export default class Courses extends Component {
                         <Row className="courses__block">
                             <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
                                 <img
-                                    key={items.name}
-                                    src={items[0]['strDrinkThumb']}
+                                    src={`data:image/png;base64, ${txt[0]['preview']}`}
                                     alt=""
                                     width="300px"
                                 />
                             </Col>
 
                             <Col className="courses__info">
-                                <div className="courses__title" key={items.name}>
-                                    {items[0]['strDrink']}
+                                <div className="courses__title">
+                                    {txt[0]['course_name']}
                                 </div>
 
-                                <div className="mt-3 mb-3 suptitle" key={items.name}>
-                                    {items[0]['strDrink']}
+                                <div className="mt-3 mb-3 suptitle">
+                                    {txt[0]['description']}
                                 </div>
 
                                 <table class="table table-bordered table-striped table-hover">
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td key={items.name}> {items[0]['strDrink']} </td>
+                                            <td>  </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
@@ -91,27 +89,26 @@ export default class Courses extends Component {
                         <Row className="courses__block">
                             <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
                                 <img
-                                    key={items.name}
-                                    src={items[1]['strDrinkThumb']}
+                                    src={`data:image/png;base64, ${txt[1]['preview']}`}
                                     alt=""
                                     width="300px"
                                 />
                             </Col>
 
                             <Col className="courses__info">
-                                <div className="courses__title" key={items.name}>
-                                    {items[1]['strDrink']}
+                                <div className="courses__title">
+                                    {txt[1]['course_name']}
                                 </div>
 
-                                <div className="mt-3 mb-3 suptitle" key={items.name}>
-                                    {items[1]['strDrink']}
+                                <div className="mt-3 mb-3 suptitle">
+                                    {txt[1]['description']}
                                 </div>
 
                                 <table class="table table-bordered table-striped table-hover">
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td key={items.name}> {items[1]['strDrink']} </td>
+                                            <td>  </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>

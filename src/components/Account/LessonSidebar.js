@@ -14,7 +14,7 @@ class LessonSidebar extends Component {
                         className="mx-auto d-block sidebar__logo"
                     />
 
-                    <Nav.Link className="m-3 sidebar__link text-center" href="/">
+                    <Nav.Link className="m-3 sidebar__link text-center" href="/account/lesson">
                         Вступний урок
                     </Nav.Link>
 

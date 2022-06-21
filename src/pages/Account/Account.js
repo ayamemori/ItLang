@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Button, Col, Row, Card, Form } from 'react-bootstrap';
 import { showAccountHeader, showAccountSidebar } from '../../components/Account/AccountShow';
 import acc from '../../assets/img/account.svg';
-import ImageUpload from '../../components/ImageUpload';
 
 import '../../assets/js/progressit';
 import '../../assets/js/progresseng';
-import '../../assets/js/upload';
 
 export default class Account extends Component {
     render() {
@@ -22,7 +20,7 @@ export default class Account extends Component {
                                 <Row>
                                     <Col className="col-sm-12 col-md-12 col-xl-3 col-xxl-2">
                                         <div class="upload__photo">
-                                            <input type="file" class="upload" name="avatar" id="avatar" />
+                                            {/* <input type="file" class="upload" name="avatar" id="avatar" /> */}
                                             <img src={acc} alt="" />
                                         </div>
                                     </Col>

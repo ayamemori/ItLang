@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { showLessonHeader, showLessonSidebar } from '../../components/Account/AccountShow';
-import { Button } from 'react-bootstrap';
-import Post from '../../assets/img/blog1.png';
+import { Button, Row, Col } from 'react-bootstrap';
+import Lesson from '../../assets/img/lesson.jpg';
 
 import { thequestions } from '../../assets/js/quiz';
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export default class CourseTheme extends Component {
     state = { index: 0, arrindex: 0, clicked: false, correctanswers: 0 }
@@ -51,7 +49,7 @@ export default class CourseTheme extends Component {
     }
 
 
-    
+
 
     render() {
         const numcorrect = this.state.correctanswers;
@@ -62,25 +60,116 @@ export default class CourseTheme extends Component {
                 {showLessonHeader()}
                 <div className="acc__container">
                     <div className="acc__inner">
-                        <div className="title">Вступний урок</div>
+                        <div className="title">Past Simple</div>
 
-                        <p className="suptitle">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus quibusdam nisi, illum mollitia assumenda magni cupiditate consequuntur ut, dignissimos corrupti temporibus consequatur aperiam quasi adipisci?
-                        </p>
-
-                        <p className="suptitle">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, omnis nam? Sit eaque quas illum illo non provident saepe ipsum excepturi distinctio numquam, esse in cum eveniet quod. Obcaecati, delectus repudiandae in sit incidunt explicabo vel fugiat distinctio ad quibusdam?
-                        </p>
-
-                        <p className="suptitle">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit beatae a vitae corporis, maiores magni ea, vero atque quod delectus itaque exercitationem odio molestiae molestias unde voluptatibus consectetur quam incidunt. Assumenda sint quia suscipit totam aliquid reprehenderit optio accusantium fugit.
-                        </p>
-
-                        <div className="w-100 text-center post__img">
-                            <img className="w-75" src={Post} alt="post img" />
+                        <div className="post__suptitle">
+                            Стверджувальне речення
                         </div>
 
+                        <p className="suptitle">
+                            Past Simple (Past Indefinite) утворюється за допомогою використання форми минулого часу смислового дієслова. Якщо дія виражена правильним дієсловом, то його форма минулого часу утворюється за допомогою додавання закінчення -ed до його словникової форми. Якщо вживається неправильне дієслово, тоді використовується його друга форма з таблиці неправильних дієслів. Якщо потрібне дієслово відсутнє в таблиці, це означає, що воно правильне і минулий час утворюється за допомогою закінчення -ed. Форма минулого часу дієслова однакова для всіх осіб однини та множини (окрім дієслова to be).
+                        </p>
 
+                        <Row className='d-flex flex-row justify-content-evenly mt-2 mb-2'>
+                            <Col className='col-5 coloftext'>
+                                <p>She worked abroad. – Вона працювала за кордоном.</p>
+                                <p>My uncle lived here. – Мій дядько жив тут.</p>
+                                <p>Harry wrote a lot of books. – Гаррі написав багато книг.</p>
+                            </Col>
+
+                            <Col className='col-5 coloftext'>
+                                <p>She was angry yesterday. – Вчора вона була розлюченою.</p>
+                                <p>We were young and reckless. – Ми були молоді та безтурботні.</p>
+                            </Col>
+                        </Row>
+
+                        <Row className='d-flex flex-row justify-content-evenly mt-4'>
+                            <Col className="col-3 d-flex flex-column coloftext">
+                                <p>to work → worked</p>
+                                <p>to translate → translated</p>
+                                <p>to agree → agreed</p>
+                            </Col>
+
+                            <Col className="col-3 d-flex flex-column coloftext">
+                                <p>to study → studied</p>
+                                <p>to play → played</p>
+                            </Col>
+
+                            <Col className="col-3 d-flex flex-column coloftext">
+                                <p>to stop → stopped</p>
+                                <p>to relax → relaxed</p>
+                            </Col>
+                        </Row>
+
+                        <div className="post__suptitle">
+                            Заперечне речення
+                        </div>
+
+                        <p className="suptitle">
+                            Заперечення в Past Simple утворюється за допомогою допоміжного дієслова did та заперечної частки not після нього, що стоять після підмета та перед смисловим дієсловом. Did – це форма минулого часу допоміжного дієслова do. Did вживається для всіх осіб однини та множини.
+                            Після did not смислове дієслово використовується в формі простого інфінітиву без частки to, тому що граматичний час в такому випадку виражається через допоміжне дієслово did.
+                        </p>
+
+                        <Row className='d-flex flex-row justify-content-evenly mt-2 mb-2'>
+                            <Col className='col-5 coloftext'>
+                                <p>She did not work abroad. – Вона не працювала за кордоном.</p>
+                                <p>Harry did not write a lot of letters. – Гаррі не написав багато листів.</p>
+                            </Col>
+
+                            <Col className='col-5 coloftext'>
+                                <p className='post__important'>Did not = didn’t (скорочення)</p>
+                                <p>His uncle didn’t live here. – Його дядько не жив тут.</p>
+                                <p>Your grandfather didn’t dance. – Твій дідусь не танцював.</p>
+                            </Col>
+                        </Row>
+
+                        <p className="suptitle">
+                            Заперечення з дієсловом to be в формі минулого часу (was, were) утворюється шляхом додавання частки not після was або were. Was та were не потребують допоміжних дієслів для утворення заперечного речення.
+                        </p>
+
+                        <Row className='d-flex flex-row justify-content-evenly mt-2 mb-2'>
+                            <Col className='col-5 coloftext'>
+                                <p>I was not angry yesterday. – Я не була злою вчора.</p>
+                                <p>Kate and Jack were not here two day ago. – Кейт та Джек не були тут два дні тому.</p>
+                            </Col>
+
+                            <Col className='col-5 coloftext'>
+                                <p className='post__important'>was not = wasn't (скорочення)</p>
+                                <p className='post__important'>were not = weren't</p>
+                                <p>Your grandfather didn’t dance. – Твій дідусь не танцював.</p>
+                            </Col>
+                        </Row>
+
+                        <p className='post__suptitle'>
+                            Питальне речення
+                        </p>
+
+                        <p>
+                            Загальне питання в Past Simple утворюється за допомогою допоміжного дієслова did, що ставиться на початку речення перед підметом. Після підмета використовується смислове дієслово тільки в формі простого інфінітиву без частки to.
+                        </p>
+
+                        <Row className='d-flex flex-row justify-content-evenly mt-2 mb-2'>
+                            <Col className='col-5 coloftext'>
+                                <p>Did she work abroad? – Вона працювала за кордоном?</p>
+                                <p>Did Harry write a lot of letters? – Гаррі писав багато листів?</p>
+                            </Col>
+                        </Row>
+
+                        <p>
+                            Спеціальне питання в Past Simple утворюється за допомогою питального слова або фрази, що ставиться на початок речення перед допоміжним дієсловом. Подальший порядок слів такий самий, як і в загальному питанні для Past Simple.
+                        </p>
+
+                        <Row className='d-flex flex-row justify-content-evenly mt-2 mb-2'>
+                            <Col className='col-5 coloftext'>
+                                <p>Where did she work? – Де вона працювала?</p>
+                                <p>What did Harry write? – Що писав Гаррі?</p>
+                                <p>When did he live here? – Коли він тут жив?</p>
+                            </Col>
+                        </Row>
+
+                        <div className="w-100 text-center post__img">
+                            <img className="w-75" src={Lesson} alt="post img" />
+                        </div>
 
                         <div className="title">
                             Вивчення слів

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
 import RichTextEditor from '../../components/RichTextEditor';
+import ImageUpload from '../../components/ImageUpload';
 
 const AddTheme = props => {
 
@@ -134,17 +135,23 @@ const AddTheme = props => {
             ]
         )
     }
-    
+
     return (
         <>
             <div className="admin__container">
                 <div className="acc__inner">
                     <Form>
                         <Row>
-                            <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5 inputs__inner">
+                            <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-5">
                                 <Form.Group className="mb-3">
                                     <Form.Control type="text" name="nameCourse" placeholder="Назва теми" />
                                 </Form.Group>
+                            </Col>
+
+                            <Col className="upload__photo">
+                                <ImageUpload />
+                                <ImageUpload />
+                                <ImageUpload />
                             </Col>
                         </Row>
 

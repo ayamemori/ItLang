@@ -6,13 +6,11 @@ import { login, signup } from '../action/user';
 const Enter = props => {
     let use = React.createRef();
     function userClick() {
-        console.log(use.current.value)
         return use.current.value;
     }
 
     let pass = React.createRef();
     function passClick() {
-        console.log(pass.current.value)
         return pass.current.value;
     }
 
@@ -24,13 +22,15 @@ const Enter = props => {
     let confirm = React.createRef();
     let group = React.createRef();
     function signUpClick() {
-        console.log(name.current.value)
-        console.log(surname.current.value)
-        console.log(username.current.value)
-        console.log(email.current.value)
-        console.log(password.current.value)
-        console.log(confirm.current.value)
-        console.log(group.current.value)
+        return [
+            name.current.value,
+            surname.current.value,
+            username.current.value,
+            email.current.value,
+            password.current.value,
+            confirm.current.value,
+            group.current.value
+        ]
     }
 
     return (
