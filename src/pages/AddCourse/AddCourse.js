@@ -41,28 +41,6 @@ export default class AddCourse extends Component {
                                 </Col>
                             </Row>
                         </Form>
-
-                        <ol className="courses__list">
-                            <li className="d-flex justify-content-between courses__item">
-                                Intro
-                                <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
-                            </li>
-
-                            <li className="d-flex justify-content-between courses__item">
-                                Тема 1
-                                <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
-                            </li>
-
-                            <li className="d-flex justify-content-between courses__item">
-                                Тема 2
-                                <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
-                            </li>
-
-                            <li className="d-flex justify-content-between courses__item">
-                                Тема 3
-                                <button className="delete__btn"><img className="delete__img" src={Delete} alt="" /></button>
-                            </li>
-                        </ol>
                     </div>
                 </div>
             </>

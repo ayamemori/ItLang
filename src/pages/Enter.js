@@ -54,7 +54,6 @@ const Enter = props => {
 
                             <div className="btn-animates">
                                 <a href="/account"><div onClick={() => login(userClick(), passClick())} class="btn-animate"> Авторизація</div></a>
-
                             </div>
                         </form>
 

@@ -127,133 +127,133 @@ export default class CourseTest extends Component {
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
                                             <div>
-                                                {/* 3. {array[2][0]} */}
+                                                3. {array[2][0]}
                                             </div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="three_test" value="one" />
-                                                {/* {array[2][1][0]} */}
+                                                {array[2][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="three_test" value="two" />
-                                                {/* {array[2][1][1]} */}
+                                                {array[2][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="three_test" value="three" />
-                                                {/* {array[2][1][2]} */}
+                                                {array[2][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
                                             <div>
-                                                {/* 4. {array[3][0]} */}
+                                                4. {array[3][0]}
                                             </div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="four_test" value="one" />
-                                                {/* {array[3][1][0]} */}
+                                                {array[3][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="four_test" value="two" />
-                                                {/* {array[3][1][1]} */}
+                                                {array[3][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="four_test" value="three" />
-                                                {/* {array[3][1][2]} */}
+                                                {array[3][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>5. Lorem ipsum dolor sit amet?</div>
+                                            <div>5. {array[4][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="five_test" value="one" />
-                                                One
+                                                {array[4][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="five_test" value="two" />
-                                                Two
+                                                {array[4][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="five_test" value="three" />
-                                                Three
+                                                {array[4][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>6. Lorem ipsum dolor sit amet?</div>
+                                            <div>6. {array[5][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="six_test" value="one" />
-                                                One
+                                                {array[5][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="six_test" value="two" />
-                                                Two
+                                                {array[5][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="six_test" value="three" />
-                                                Three
+                                                {array[5][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>7. Lorem ipsum dolor sit amet?</div>
+                                            <div>7. {array[6][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="seven_test" value="one" />
-                                                One
+                                                {array[6][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="seven_test" value="two" />
-                                                Two
+                                                {array[6][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="seven_test" value="three" />
-                                                Three
+                                                {array[6][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>8. Lorem ipsum dolor sit amet?</div>
+                                            <div>8. {array[7][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="eight_test" value="one" />
-                                                One
+                                                {array[7][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="eight_test" value="two" />
-                                                Two
+                                                {array[7][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="eight_test" value="three" />
-                                                Three
+                                                {array[7][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>9. Lorem ipsum dolor sit amet?</div>
+                                            <div>9. {array[8][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="nine_test" value="one" />
-                                                One
+                                                {array[8][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="nine_test" value="two" />
-                                                Two
+                                                {array[8][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="nine_test" value="three" />
-                                                Three
+                                                {array[8][1][2]}
                                             </label>
                                         </div>
 
                                         <div className="d-flex flex-column mb-3" role="group" aria-labelledby="my-radio-group">
-                                            <div>10. Lorem ipsum dolor sit amet?</div>
+                                            <div>10. {array[9][0]}</div>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="ten_test" value="one" />
-                                                One
+                                                {array[9][1][0]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="ten_test" value="two" />
-                                                Two
+                                                {array[9][1][1]}
                                             </label>
                                             <label>
                                                 <Field className="test__radio" type="radio" name="ten_test" value="three" />
-                                                Three
+                                                {array[9][1][2]}
                                             </label>
                                         </div>
 
