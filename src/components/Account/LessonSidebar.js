@@ -15,19 +15,7 @@ class LessonSidebar extends Component {
                     />
 
                     <Nav.Link className="m-3 sidebar__link text-center" href="/account/lesson">
-                        Вступний урок
-                    </Nav.Link>
-
-                    <Nav.Link className="m-3 sidebar__link text-center" href="/">
-                        Тема 1
-                    </Nav.Link>
-                    
-                    <Nav.Link className="m-3 sidebar__link text-center" href="/">
-                        Тема 2
-                    </Nav.Link>
-                    
-                    <Nav.Link className="m-3 sidebar__link text-center" href="/">
-                        Тема 3
+                        Past Simple
                     </Nav.Link>
                 </Nav>
             </>

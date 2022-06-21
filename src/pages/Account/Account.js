@@ -13,7 +13,7 @@ export default class Account extends Component {
                 {showAccountHeader()}
                 <div className="acc__container">
                     <div className="acc__inner">
-                        
+
                         <div className="acc__block">
                             <div class="title">Особиста інформація</div>
                             <Form className="acc__form">

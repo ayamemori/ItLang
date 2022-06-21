@@ -53,7 +53,8 @@ const Enter = props => {
                             <input ref={pass} class="form-styling" type="password" name="password" id="password" autoComplete="off" required />
 
                             <div className="btn-animates">
-                                <div onClick={() => login(userClick(), passClick())} class="btn-animate">Авторизація</div>
+                                <a href="/account"><div onClick={() => login(userClick(), passClick())} class="btn-animate"> Авторизація</div></a>
+
                             </div>
                         </form>
 

@@ -14,7 +14,7 @@ export default class Courses extends Component {
     }
 
     componentDidMount() {
-        fetch("http://127.0.0.1:8000/edu/get/courses")
+        fetch("http://127.0.0.1:8000/edu/get/lessons")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -35,13 +35,22 @@ export default class Courses extends Component {
 
     render() {
         const { error, isLoaded, items } = this.state;
-        const txt = { items }.items.course;
+        const first_course = { items }.items['1']
+        const second_course = { items }.items['2']
+        function lesson(obj, key) {
+            return obj['lessons'][key]
+        }
 
         if (error) {
             return <p> Error {error.message}</p>
         } else if (!isLoaded) {
             return <p> Loading.. </p>
-        } else {
+        }
+        else if (typeof first_course == 'undefined') {
+            return <p> Loading.. </p>
+        }
+        else {
+            console.log(lesson(first_course, '1'))
             return (
                 <>
                     {showHomeHeader()}
@@ -49,7 +58,7 @@ export default class Courses extends Component {
                         <Row className="courses__block">
                             <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
                                 <img
-                                    src={`data:image/png;base64, ${txt[0]['preview']}`}
+                                    src={`data:image/png;base64, ${first_course['preview']}`}
                                     alt=""
                                     width="300px"
                                 />
@@ -57,22 +66,22 @@ export default class Courses extends Component {
 
                             <Col className="courses__info">
                                 <div className="courses__title">
-                                    {txt[0]['course_name']}
+                                    {first_course["course_name"]}
                                 </div>
 
                                 <div className="mt-3 mb-3 suptitle">
-                                    {txt[0]['description']}
+                                    {first_course["description"]}
                                 </div>
 
                                 <table class="table table-bordered table-striped table-hover">
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>  </td>
+                                            <td> Вступний урок </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td> Застосування англійської в ІТ</td>
+                                            <td> Застосування англійської в ІТ </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -89,7 +98,7 @@ export default class Courses extends Component {
                         <Row className="courses__block">
                             <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3 courses__photo">
                                 <img
-                                    src={`data:image/png;base64, ${txt[1]['preview']}`}
+                                    src={`data:image/png;base64, ${second_course['preview']}`}
                                     alt=""
                                     width="300px"
                                 />
@@ -97,18 +106,18 @@ export default class Courses extends Component {
 
                             <Col className="courses__info">
                                 <div className="courses__title">
-                                    {txt[1]['course_name']}
+                                    {second_course["course_name"]}
                                 </div>
 
                                 <div className="mt-3 mb-3 suptitle">
-                                    {txt[1]['description']}
+                                    {second_course["description"]}
                                 </div>
 
                                 <table class="table table-bordered table-striped table-hover">
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>  </td>
+                                            <td> Past Simple </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>

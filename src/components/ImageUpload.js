@@ -12,8 +12,6 @@ function ImageUpload() {
 
     return (
         <>
-            <input class="form-control mb-2" type="file" onChange={handleChange} multiple />
-            <img className="show" src={imgTmp} alt="" />
         </>
     );
 }

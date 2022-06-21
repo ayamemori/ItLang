@@ -13,7 +13,7 @@ export default class AccountCourses extends Component {
     }
 
     componentDidMount() {
-        fetch("http://127.0.0.1:8000/edu/get/courses")
+        fetch("http://127.0.0.1:8000/edu/get/lessons")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -31,16 +31,23 @@ export default class AccountCourses extends Component {
 
             )
     }
-
     render() {
         const { error, isLoaded, items } = this.state;
-        const txt = { items }.items.course;
+        const first_course = { items }.items['1']
+        const second_course = { items }.items['2']
+        function lesson(obj, key) {
+            return obj['lessons'][key]
+        }
 
         if (error) {
             return <p> Error {error.message}</p>
         } else if (!isLoaded) {
             return <p> Loading.. </p>
-        } else {
+        }
+        else if (typeof first_course == 'undefined') {
+            return <p> Loading.. </p>
+        }
+        else {
             return (
                 <>
                     {showAccountHeader()}
@@ -52,7 +59,7 @@ export default class AccountCourses extends Component {
                                         <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3">
                                             <Card className="card__progress">
                                                 <Card.Body className="d-flex flex-column align-self-center">
-                                                    <Card.Title className="mt-3 mb-3">{txt[0]['course_name']}</Card.Title>
+                                                    <Card.Title className="mt-3 mb-3">{first_course["course_name"]}</Card.Title>
                                                     <div class="progress">
                                                         <div class="progress-bar bg-warning" role="progressbar" style={{ width: '74%' }} aria-valuenow="74" aria-valuemin="0" aria-valuemax="100">74%</div>
                                                     </div>
@@ -64,7 +71,7 @@ export default class AccountCourses extends Component {
                                         <Col>
                                             <Accordion>
                                                 <Accordion.Item eventKey="0">
-                                                    <Accordion.Header className="completed">1. Past Simple</Accordion.Header>
+                                                    <Accordion.Header className="completed">1. Вступний урок</Accordion.Header>
                                                     <Accordion.Body>
                                                         <ol>
                                                             <li>Тема</li>
@@ -77,7 +84,7 @@ export default class AccountCourses extends Component {
                                                 </Accordion.Item>
 
                                                 <Accordion.Item eventKey="1">
-                                                    <Accordion.Header>2. Present Simple</Accordion.Header>
+                                                    <Accordion.Header>2. Застосування англійської в ІТ</Accordion.Header>
                                                     <Accordion.Body>
                                                         <ol>
                                                             <li>Тема</li>
@@ -90,7 +97,7 @@ export default class AccountCourses extends Component {
                                                 </Accordion.Item>
 
                                                 <Accordion.Item eventKey="2">
-                                                    <Accordion.Header>3. Future Simple</Accordion.Header>
+                                                    <Accordion.Header>3. Поширені помилки та їх вирішення</Accordion.Header>
                                                     <Accordion.Body>
                                                         <ol>
                                                             <li>Тема</li>
@@ -101,46 +108,6 @@ export default class AccountCourses extends Component {
                                                         <Button href="/account/lesson" className="orng__button" variant="warning">Пройти</Button>
                                                     </Accordion.Body>
                                                 </Accordion.Item>
-
-                                                <Accordion.Item eventKey="3">
-                                                    <Accordion.Header>4. Lorem Lorem</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        <ol>
-                                                            <li>Тема</li>
-                                                            <li>Відео</li>
-                                                            <li>Повторення слів</li>
-                                                            <li>Тест</li>
-                                                        </ol>
-                                                        <Button href="/account/lesson" className="orng__button" variant="warning">Пройти</Button>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-
-                                                <Accordion.Item eventKey="4">
-                                                    <Accordion.Header>5. Lorem Lorem</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        <ol>
-                                                            <li>Тема</li>
-                                                            <li>Відео</li>
-                                                            <li>Повторення слів</li>
-                                                            <li>Тест</li>
-                                                        </ol>
-                                                        <Button href="/account/lesson" className="orng__button" variant="warning">Пройти</Button>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-
-                                                <Accordion.Item eventKey="5">
-                                                    <Accordion.Header>6. Lorem Lorem</Accordion.Header>
-                                                    <Accordion.Body>
-                                                        <ol>
-                                                            <li>Тема</li>
-                                                            <li>Відео</li>
-                                                            <li>Повторення слів</li>
-                                                            <li>Тест</li>
-                                                        </ol>
-                                                        <Button href="/account/lesson" className="orng__button" variant="warning">Пройти</Button>
-                                                    </Accordion.Body>
-                                                </Accordion.Item>
-
                                             </Accordion>
                                         </Col>
                                     </Row>
@@ -151,7 +118,7 @@ export default class AccountCourses extends Component {
                                         <Col className="col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-3">
                                             <Card className="card__progress">
                                                 <Card.Body className="d-flex flex-column align-self-center">
-                                                    <Card.Title className="mt-3 mb-3">Підготовка до ЗНО</Card.Title>
+                                                    <Card.Title className="mt-3 mb-3">{second_course["course_name"]}</Card.Title>
                                                     <div class="progress">
                                                         <div class="progress-bar bg-warning" role="progressbar" style={{ width: '45%' }} aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
                                                     </div>

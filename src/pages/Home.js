@@ -53,13 +53,15 @@ export default class Home extends Component {
                 preserveAspectRatio: "xMidYMid slice"
             }
         };
-        
-        alert(localStorage.getItem('JWT'))
         if (error) {
             return <p> Error {error.message}</p>
         } else if (!isLoaded) {
             return <p> Loading.. </p>
-        } else {
+        }
+        else if (typeof txt == 'undefined'){
+            return <p> Loading.. </p>
+        }
+        else {
             return (
                 <>
                     {showHomeHeader()}
